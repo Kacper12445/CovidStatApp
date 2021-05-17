@@ -1,2 +1,49 @@
-<p>home works!</p>
-<button (click)= "searchStatistics()">Search countries</button>
+<!-- <button (click)="searchStatistics()">Search countries</button> -->
+<div class="home-page">
+  <div class="home-image">
+    <div class="main">
+      <div class="stats-container">
+        <div class="main-stats">
+          <div class="title">
+            <h3>World Statistics</h3>
+          </div>
+          <div class="confirmed">
+            <h3>
+              <i class="fas fa-head-side-mask"></i> Confirmed:
+              {{ this.worldStats.confirmed }}
+            </h3>
+          </div>
+          <div class="recovered">
+            <h3>
+              <i class="fas fa-heartbeat"></i> Recovered:
+              {{ this.worldStats.recovered }}
+            </h3>
+          </div>
+          <div class="critical">
+            <h3>
+              <i class="fas fa-frown"></i>Critical:
+              {{ this.worldStats.critical }}
+            </h3>
+          </div>
+          <div class="deaths">
+            <h3>
+              <i class="fas fa-skull"></i>Confirmed:
+              {{ this.worldStats.deaths }}
+            </h3>
+          </div>
+          <div class="date">
+            <h3>
+              <i class="far fa-calendar-alt"></i>Last Update:
+              {{ this.worldStats.lastChange }}
+            </h3>
+          </div>
+        </div>
+        <div class="button">
+          <button [routerLink]="['statistics']" routerLinkActive="active">
+            Search Country Statistics
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

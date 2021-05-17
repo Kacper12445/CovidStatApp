@@ -1,0 +1,59 @@
+.home-page
+  height: 90.7vh
+  background-image: url('../../../assets/coronavirus.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  .home-image
+    height: 100%
+    background-color: rgba(0, 63, 114, .3)
+    .main
+      position: relative
+      height: 100%
+      .stats-container
+        position: relative
+        top: 40%
+        left: 50%
+        width: 40%
+        max-width: 500px
+        height: 65%
+        transform: translate(-50%,-50%)
+        background-color: rgba(80, 150, 180, .5)
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .main-stats
+          display: flex
+          flex-direction: column
+          align-items: flex-start
+          justify-content: space-around
+          div
+            margin: 15px 0
+            h3
+              font-size: 20px
+              color: rgba(255,255,255,1)
+              margin-left: 12px
+              i
+                margin-right: 5px
+          .title
+            align-self: center
+            margin-bottom: 20px
+            h3
+              font-size: 60px
+              margin-left: 0
+      .button
+        align-self: center
+        button
+          border-radius: 5px
+          font-size: 15px
+          font-weight: bold
+          color: white
+          border: 1px solid yellow
+          background: 0 0
+          padding: 6px 20px
+          cursor: pointer
+          transition: .3s
+          margin: 5px 0 30px
+          &:hover
+            padding: 7px 20px
+            font-size: 16px

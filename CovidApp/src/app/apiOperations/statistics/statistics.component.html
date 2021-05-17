@@ -1,0 +1,90 @@
+<div class="home-page">
+  <div class="home-image">
+    <div class="country-container">
+      <div class="title">
+        <h2>Search Country</h2>
+        <form class="search-country">
+          <input class="country" type="text" placeholder="Country" />
+          <input class="date" type="date" placeholder="Date" />
+          <button (click)="cleanForm()">Clean</button>
+          <button (click)="searchStatistics()">Search</button>
+        </form>
+      </div>
+      <div class="stats-container">
+        <div class="info">
+          <h3>Country Statistics: {{ this.statisticArr[0].day }}</h3>
+        </div>
+        <div class="stats-type">
+          <div class="stats-name">
+            <h3><i class="fas fa-flag"></i>Country Name</h3>
+          </div>
+          <div class="stats-population">
+            <h3><i class="fas fa-male"></i>Population</h3>
+          </div>
+          <div class="stats-confirmed">
+            <h3><i class="fas fa-head-side-mask"></i> Confirmed:</h3>
+          </div>
+          <div class="stats-recovered">
+            <h3><i class="fas fa-heartbeat"></i> Recovered:</h3>
+          </div>
+          <div class="stats-critical">
+            <h3><i class="fas fa-frown"></i>Critical:</h3>
+          </div>
+          <div class="stats-deaths">
+            <h3><i class="fas fa-skull"></i>Death:</h3>
+          </div>
+          <div class="stats-date">
+            <h3><i class="fas fa-clipboard-list"></i>Tests:</h3>
+          </div>
+        </div>
+        <div *ngFor="let country of statisticArr | slice: 0:15" class="country">
+          <div class="stats-sections">
+            <div class="country-name">
+              <h3>{{ country.country }}</h3>
+            </div>
+            <div class="country-population">
+              <h3>{{ country.population }}</h3>
+            </div>
+            <div class="country-confirmed">
+              <h3>
+                {{
+                  country.cases.active == null ? "---" : country.cases.active
+                }}
+              </h3>
+            </div>
+            <div class="country-recovered">
+              <h3>
+                {{
+                  country.cases.recovered == null
+                    ? "---"
+                    : country.cases.recovered
+                }}
+              </h3>
+            </div>
+            <div class="country-critical">
+              <h3>
+                {{
+                  country.cases.critical == null
+                    ? "---"
+                    : country.cases.critical
+                }}
+              </h3>
+            </div>
+            <div class="country-deaths">
+              <h3>
+                {{
+                  country.deaths.total == null ? "---" : country.deaths.total
+                }}
+              </h3>
+            </div>
+            <div class="country-tests">
+              <h3>
+                {{ country.tests.total == null ? "---" : country.tests.total }}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

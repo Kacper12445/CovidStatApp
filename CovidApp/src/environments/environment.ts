@@ -7,6 +7,7 @@ export const environment = {
   covidApiUrl: 'https://covid-193.p.rapidapi.com/',
   apiHost: 'covid-193.p.rapidapi.com',
   apiKey: 'c6939485b1msh554bb1848fd05e3p17c4eajsnff0e7a27fd8b',
+  totalApiUrl: 'https://covid-19-data.p.rapidapi.com/',
 };
 
 /*
